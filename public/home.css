@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  min-width: 600px;
+  overflow-x: scroll;
+  padding: 0px;
+  font-size: 18px;
+  scroll-behavior: smooth;
+}::-webkit-scrollbar {
+  display: none;
+  width: 0px; 
+  height: 0px;
+}
+
+#root{
+    height: 100%;
+    width: 100%;
+}
+
+
+.myheader{
+    height: 10%;
+    min-height: 55px;
+    width: 100%;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.myheader span{
+    -webkit-text-stroke: 2px black; /* width and color */
+}
+
+
+.myheaderFirst{
+    height: 100%;
+    width: 6%;
+    margin-left: 2%;
+}
+
+.myheaderFirst img{
+    height: 100%;
+    margin-top: 3px;
+}
+
+.myheaderSecond{
+    height: 100%;
+    width: 82%;
+    font-size: 50px;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.myheaderThird{
+    height: 100%;
+    width: 6%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 2%px;
+}
+
+main{
+    height: 90%;
+    min-height: 460px;
+    width: 100%;
+}
+
+nav{
+    height: 100%;
+    width: 100%;
+    min-height: 500px;
+    padding: 10px 30px 10px 30px;
+}
+
+#mainHome {
+    height: 85%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    margin-top: 20px;
+}
+
+.homeBlock{
+    color: black;
+    display: flex;
+    position: relative;
+    text-decoration: none;
+    border-radius: 30px;
+    overflow: scroll;
+    border: solid 1px rgba(0, 0, 0, .2);
+    background: rgba(0, 0, 0, 0.03);
+    box-shadow: 5px 5px 2px rgba(87, 87, 87, 0.308);
+    transition: 0.2s;
+}
+
+.homeBlock h1 {
+    text-align: center;
+}
+
+.homeBlock:hover{
+    background: rgba(154, 163, 163, 0.671);
+    scale: 1.12;
+}
+
+.homeBlock > *{
+    margin: 5px;
+}
+
+/*SCHERMO GRANDE*/
+@media only screen and (min-width: 800px) {
+    .homeBlock{
+        height: 100%;
+        min-height: 300px;
+        width: 30%;
+        justify-content: center;  
+    }
+    .homeBlock > h1{
+        position: absolute; 
+        top: 10%;
+    }
+    .homeBlock > p{
+        position: absolute;
+        text-align: center;
+        top: 30%;
+    }
+    .homeBlock > img{
+        position: absolute;
+        height: 100px;
+        bottom: 15px;
+    }
+}
+
+/*SCHERMO PICCOLO*/
+@media only screen and (max-width: 800px) {
+    .homeBlock{
+        align-items: center;
+        height: 30%;
+        min-height: 120px;
+        width: 100%;
+    }
+    .homeBlock > h1{
+        position: absolute; 
+        top: 5px;
+        left: 10px;
+    }
+    .homeBlock > p{
+        width: 65%;
+        position: absolute;
+        top: 50px;
+        left: 10px;
+    }
+    .homeBlock > img{
+        position: absolute;
+        height: 70px;
+        bottom: 15px;
+        right: 5%;
+    }
+    .myheaderSecond{
+        font-size: 40px;
+    }
+}
+
